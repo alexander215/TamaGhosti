@@ -1,4 +1,8 @@
 body {
-    background-color: grey;
+    background-image: linear-gradient(90deg, #17BEBB, #00A56E, #0197F6);
 
+}
+
+#startButton {
+    text-align: center;
 }
