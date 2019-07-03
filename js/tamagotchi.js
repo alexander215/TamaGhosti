@@ -8,12 +8,14 @@ class Tamagotchi {
 
     }
     initPet(){
-        console.log(this.name, "<--initpet");
+        const $div = $('<div/>');
+        const $name = $('name');
         // const $h1 = $
+        const $stats =  $(`<div class="stats"><h2>Hunger:</h2><p>0</p></div><div class="stats"><h2>Sleepiness:</h2><p>0</p></div><div class="stats"><h2>Boredom:</h2><p>0</p>`);
+
+        $('#bars').append($stats);
     }
-    hunger(){
-        // every 10 seconds increase hunger by 1 point
-    }
+    
 
 
 }

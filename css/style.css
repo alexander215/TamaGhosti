@@ -6,3 +6,17 @@ body {
 #startButton {
     text-align: center;
 }
+
+#div {
+    height: 40%;
+    width: 50%;
+    border-radius: 50%;
+    background-color: aliceblue;
+    text-align: center;
+}
+
+.stats {
+    /* float: left; */
+    text-align: center;
+    margin: 0 auto;
+}

@@ -7,17 +7,21 @@ $('#startButton').on('click', (e) => {
 const game = {
 startGame () {
     petName = prompt('What do you want to name your pet?', '');
-    // Tamagotchi(namePrompt);
-    console.log(petName);
     $('#startButton').hide();
+    // petName = new Tamagotchi(petName);
     petName = new Tamagotchi(petName);
-    console.log(petName.name);
-    // petName.initPet();
-    // console.log(Tamagotchi.name);
-}
+
+    petName.initPet();
+},
 feed (){
         
 }
 
 
+}
+const hunger = () => {
+    setInterval(() => {
+        this.hunger += 1;
+    }, 10000)
+    // every 10 seconds increase hunger by 1 point
 }
