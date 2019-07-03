@@ -17,36 +17,35 @@ age (){
     // const ageCounter = 
     setInterval(() => {
         petName.age +=1;
-        const age = document.querySelector("#age")
-        age.innerText = "Age: " + petName.age
-        console.log(petName.age);
-    }, 1000)
+        // const age = document.querySelector("#ageTracker")
+        // age.innerText = "Age: " + petName.age
+        $('#ageTracker').text(`Age: ${petName.age}`)
+    }, 2000)
 
 },
-feed (){
-        
+hunger (){
+    setInterval(() => {
+        petName.hunger +=1;
+        $('#hungerTracker').text(`Hunger: ${petName.hunger}`);
+
+    }, 2000)
+
+},
+
+sleepiness (){
+    setInterval(() => {
+        petName.sleepiness +=1;
+        $('#sleepinessTracker').text(`Sleepiness: ${petName.sleepiness}`);
+
+    }, 2000)
+},
+
+boredom (){
+    setInterval(() => {
+        petName.boredom +=1;
+        $('#boredomTracker').text(`Boredom: ${petName.sleepiness}`);
+
+    }, 2000)
 }
+
 }
-// const hunger = () => {
-//     setInterval(() => {
-//         petName.hunger += 1;
-//     }, 10000)
-//     console.log(petName.hunger, "<- hunger function");
-//     // every 10 seconds increase hunger by 1 point
-
-// }
-
-// const age = () => {
-//     setInterval(() => {
-//         petName.age += 1;
-//     }, 1000)
-//     // every 10 seconds increase hunger by 1 point
-// }
-
-
-
-
-// let counter = 0;
-// const intervalId = setInterval(() => {  
-//     console.log(counter);  counter += 1;
-// }, 1000)
