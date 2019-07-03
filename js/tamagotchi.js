@@ -8,12 +8,12 @@ class Tamagotchi {
 
     }
     initPet(){
-        const $div = $('<div/>');
-        const $name = $('name');
-        // const $h1 = $
-        const $stats =  $(`<div class="stats"><h2>Hunger:</h2><p>0</p></div><div class="stats"><h2>Sleepiness:</h2><p>0</p></div><div class="stats"><h2>Boredom:</h2><p>0</p>`);
-
+        const $stats =  $(`<div class="stats"><h2>Hunger:</h2><p>${petName.hunger}</p></div><div class="stats"><h2>Sleepiness:</h2><p>${petName.sleepiness}</p></div><div class="stats"><h2>Boredom:</h2><p>${petName.boredom}</p><div class="stats"><h2 id="age">Age: ${petName.age}</h2></div>`);
+        $('#pet').append(`<h3>Boooooo... I'm ${petName.name} the Tama-ghost-i...</h3>`);
+        $('#pet').append(`<img id="ghost" src="images/ghost-pet.png"/>`);
         $('#bars').append($stats);
+        
+        game.age();
     }
     
 
