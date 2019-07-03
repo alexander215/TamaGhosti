@@ -27,3 +27,8 @@ body {
 #ghost {
     max-width: 100px;
 }
+
+.buttons{
+    border: black solid 2px;
+
+}
