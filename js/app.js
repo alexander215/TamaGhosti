@@ -49,3 +49,13 @@ boredom (){
 }
 
 }
+
+$('.buttons').on('mousedown', e => {
+    $(e.target).css('background-color', 'white');
+    $(e.target).css('color', 'black');
+})
+
+$('.buttons').on('mouseup', e => {
+    $(e.target).css('background-color', 'black');
+    $(e.target).css('color', 'white');
+})

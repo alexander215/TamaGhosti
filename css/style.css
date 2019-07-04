@@ -5,6 +5,10 @@ body {
 
 #startButton {
     text-align: center;
+    border: white solid 2px;
+    background-color: red;
+    color: black;
+    padding: 25px;
 }
 
 #div {
@@ -29,6 +33,10 @@ body {
 }
 
 .buttons{
-    border: black solid 2px;
+    border: white solid 2px;
+    background-color: black;
+    color: white;
+    padding: 25px;
+    text-align: center;
 
 }
