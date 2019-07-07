@@ -1,8 +1,13 @@
+// This is the name of the character that the user will input
 let petName;
+
+// This is how many seconds will pass before each stat will increase by 1
 let ageVariable = 5;
 let hungerVariable = 4;
 let sleepinessVariable = 5;
 let boredomVariable = 6;
+
+// These are how much the buttons will reduce each stat
 let hungerReduceVariable = 3;
 let sleepinessReduceVariable = 3;
 let boredomReduceVariable = 3;
