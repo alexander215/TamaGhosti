@@ -13,6 +13,7 @@ let sleepinessReduceVariable = 3;
 let boredomReduceVariable = 3;
 
 $('.bars').hide();
+$('.pet').hide();
 
 $('#startButton').on('click', (e) => {
     game.startGame();
@@ -99,7 +100,7 @@ boredomReduce () {
 },
 
 gameOver (reason) {
-    $('.pet').css('color', 'red').append(`<h1>Oh no! <u>${petName.name}</u> became too ${reason} and left for another dimension!</h1>`);
+    $('.title').css('color', 'red').append(`<h1>Oh no! <u>${petName.name}</u> became too ${reason} and left for another dimension!</h1>`);
     $('#ghost').attr('src', 'images/angry-ghost.svg');
     // clearTimeout(game);
     // clearInterval(game);

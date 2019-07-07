@@ -31,18 +31,43 @@ body {
 .pet {
     text-align: center;
     background-color: white;
-    max-width: 20%;
+    max-width: 40%;
     margin: 0 auto;
+    border-radius: 20%;
+    height: 200px;
 }
 .pet2 {
     text-align: center;
     background-color: black;
-    max-width: 20%;
+    max-width: 40%;
     margin: 0 auto;
+    border-radius: 20%;
+    height: 200px;
 }
 
 #ghost {
+    /* position: absolute; */
+    /* top: -40%; */
+    /* left: 0px; */
     max-width: 100px;
+    animation-name: dance;
+    animation-duration: 3s;
+    padding: 50px 0;
+    position: relative;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+}
+
+@keyframes dance{
+    /* from{ transform: translateX(0)} */
+    /* to{ transform: translateX(500px)} */
+    0% {left: 0px; top: 0px}
+    25% {left: 50px; top: 0px}
+    50% {left: 50px; top: 25px}
+    75% {left: -50px; top: 25px}
+    100% {left: 0px; top: 0px}
+
 }
 
 button {
@@ -66,3 +91,5 @@ button {
 .interactive2{
     visibility: visible;
 }
+
+
