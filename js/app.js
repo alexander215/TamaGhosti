@@ -1,8 +1,8 @@
 let petName;
 let ageVariable = 5;
-let hungerVariable = 3;
-let sleepinessVariable = 3;
-let boredomVariable = 1;
+let hungerVariable = 4;
+let sleepinessVariable = 5;
+let boredomVariable = 6;
 let hungerReduceVariable = 1;
 let sleepinessReduceVariable = 1;
 let boredomReduceVariable = 1;
@@ -22,6 +22,8 @@ startGame () {
     petName.initPet();
 
 },
+
+
 setTimer () {
     const timer = setInterval(() => {
         console.log(`Game timer: ${petName.time}`);
@@ -68,8 +70,8 @@ sleepinessReduce () {
     if (petName.sleepiness > 0) {
     petName.sleepiness -= sleepinessReduceVariable;
     $('#sleepinessTracker').text(`Sleepiness: ${petName.sleepiness}`)
-    $('#pet').css('background-color', 'black');
-    $('#pet').css('color', 'white').delay(600);
+    $('.pet').css('background-color', 'black');
+    $('.pet').css('color', 'white').delay(600);
     }
 },
 
@@ -81,13 +83,23 @@ boredomReduce () {
 },
 
 gameOver (reason) {
-    $('#pet').css('color', 'red').append(`<h1>Oh no! <u>${petName.name}</u> became too ${reason} and left for another dimension!</h1>`);
+    $('.pet').css('color', 'red').append(`<h1>Oh no! <u>${petName.name}</u> became too ${reason} and left for another dimension!</h1>`);
     $('#ghost').attr('src', 'images/angry-ghost.svg');
     // clearTimeout(game);
     // clearInterval(game);
 
-}
+},
 
+lightsOut() {
+    console.log("game lights out")
+    $('.pet').toggleClass('pet pet2');
+    const delay = setTimeout(() => {
+    // $('.pet').css('background-color', 'yellow');
+    $('.pet2').toggleClass('pet2 pet');
+
+}, 5000)
+    
+},
 }
 
 $('.buttons').on('mousedown', e => {
@@ -107,6 +119,7 @@ $("#feed").on('click', () => {
 
 $("#lights").on('click', () => {
     console.log("lights clicked");
+    game.lightsOut();
     game.sleepinessReduce();
 })
 
@@ -114,3 +127,4 @@ $("#play").on('click', () => {
     console.log("play clicked");
     game.boredomReduce();
 })
+

@@ -25,9 +25,22 @@ body {
     margin: 0 auto;
 }
 
-#pet {
+.title {
     text-align: center;
 }
+.pet {
+    text-align: center;
+    background-color: white;
+    max-width: 20%;
+    margin: 0 auto;
+}
+.pet2 {
+    text-align: center;
+    background-color: black;
+    max-width: 20%;
+    margin: 0 auto;
+}
+
 #ghost {
     max-width: 100px;
 }
