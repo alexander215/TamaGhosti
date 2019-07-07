@@ -1,4 +1,9 @@
 let petName;
+let ageVariable = 5;
+let hungerVariable = 3;
+let sleepinessVariable = 3;
+let boredomVariable = 3;
+
 $('.bars').hide();
 
 $('#startButton').on('click', (e) => {
@@ -14,41 +19,28 @@ startGame () {
     petName.initPet();
 
 },
-age (){
-    // const ageCounter = 
+setTimer () {
     setInterval(() => {
-        petName.age +=1;
-        // const age = document.querySelector("#ageTracker")
-        // age.innerText = "Age: " + petName.age
-        $('#ageTracker').text(`Age: ${petName.age}`)
-    }, 2000)
-
+        petName.time +=1;
+        $('#gameTimer').text(`Time: ${petName.time}`)
+        if ((petName.time % ageVariable) === 0){
+            petName.age +=1;
+            $('#ageTracker').text(`Age: ${petName.age}`)
+        }
+        if ((petName.time % hungerVariable) === 0){
+            petName.hunger +=1;
+            $('#hungerTracker').text(`Hunger: ${petName.hunger}`)
+        }
+        if ((petName.time % sleepinessVariable) === 0){
+            petName.sleepiness +=1;
+            $('#sleepinessTracker').text(`Sleepiness: ${petName.sleepiness}`)
+        } 
+        if ((petName.time % boredomVariable) === 0){
+            petName.boredom +=1;
+            $('#boredomTracker').text(`Boredom: ${petName.boredom}`)
+        }
+    }, 1000)
 },
-hunger (){
-    setInterval(() => {
-        petName.hunger +=1;
-        $('#hungerTracker').text(`Hunger: ${petName.hunger}`);
-
-    }, 2000)
-
-},
-
-sleepiness (){
-    setInterval(() => {
-        petName.sleepiness +=1;
-        $('#sleepinessTracker').text(`Sleepiness: ${petName.sleepiness}`);
-
-    }, 2000)
-},
-
-boredom (){
-    setInterval(() => {
-        petName.boredom +=1;
-        $('#boredomTracker').text(`Boredom: ${petName.sleepiness}`);
-
-    }, 2000)
-}
-
 }
 
 $('.buttons').on('mousedown', e => {

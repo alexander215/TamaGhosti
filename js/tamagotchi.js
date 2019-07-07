@@ -5,6 +5,7 @@ class Tamagotchi {
         this.sleepiness = 0;
         this.boredom = 0;
         this.age = 0;
+        this.time = 0;
 
     }
     initPet(){
@@ -18,7 +19,8 @@ class Tamagotchi {
 
         $('.interactive').toggleClass('interactive interactive2');
 
-        game.age();
+        game.setTimer();
+        // game.age();
         game.hunger();
         game.sleepiness();
         game.boredom();
