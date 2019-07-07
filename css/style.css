@@ -32,11 +32,20 @@ body {
     max-width: 100px;
 }
 
-.buttons{
+button {
     border: white solid 2px;
     background-color: black;
     color: white;
     padding: 25px;
     text-align: center;
+    width: 200px;
 
+}
+
+.interactive{
+    visibility: hidden;
+}
+
+.interactive2{
+    visibility: visible;
 }

@@ -1,4 +1,5 @@
 let petName;
+$('.bars').hide();
 
 $('#startButton').on('click', (e) => {
     game.startGame();

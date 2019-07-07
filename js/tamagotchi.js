@@ -13,6 +13,11 @@ class Tamagotchi {
         $('#pet').append(`<img id="ghost" src="images/ghost-pet.png"/>`);
         // $('#bars').append($stats);
         
+        
+        $('.bars').show();
+
+        $('.interactive').toggleClass('interactive interactive2');
+
         game.age();
         game.hunger();
         game.sleepiness();
