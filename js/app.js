@@ -3,6 +3,7 @@ let ageVariable = 5;
 let hungerVariable = 3;
 let sleepinessVariable = 3;
 let boredomVariable = 3;
+let hungerReduceVariable = 1;
 
 $('.bars').hide();
 
@@ -21,6 +22,7 @@ startGame () {
 },
 setTimer () {
     setInterval(() => {
+        // console.log(`Game timer: ${petName.time}`);
         petName.time +=1;
         $('#gameTimer').text(`Time: ${petName.time}`)
         if ((petName.time % ageVariable) === 0){
@@ -41,6 +43,10 @@ setTimer () {
         }
     }, 1000)
 },
+hungerReduce () {
+    petName.hunger -= hungerReduceVariable;
+    $('#hungerTracker').text(`Hunger: ${petName.hunger}`)
+},
 }
 
 $('.buttons').on('mousedown', e => {
@@ -51,4 +57,9 @@ $('.buttons').on('mousedown', e => {
 $('.buttons').on('mouseup', e => {
     $(e.target).css('background-color', 'black');
     $(e.target).css('color', 'white');
+})
+
+$("#feed").on('click', () => {
+    console.log("feed clicked");
+    game.hungerReduce();
 })

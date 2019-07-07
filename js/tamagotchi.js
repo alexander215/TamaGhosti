@@ -20,10 +20,6 @@ class Tamagotchi {
         $('.interactive').toggleClass('interactive interactive2');
 
         game.setTimer();
-        // game.age();
-        game.hunger();
-        game.sleepiness();
-        game.boredom();
     }
     
 
