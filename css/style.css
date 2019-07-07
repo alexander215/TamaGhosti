@@ -42,6 +42,10 @@ button {
 
 }
 
+.controls {
+    text-align: center;
+}
+
 .interactive{
     visibility: hidden;
 }

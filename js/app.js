@@ -4,6 +4,8 @@ let hungerVariable = 3;
 let sleepinessVariable = 3;
 let boredomVariable = 3;
 let hungerReduceVariable = 1;
+let sleepinessReduceVariable = 1;
+let boredomReduceVariable = 1;
 
 $('.bars').hide();
 
@@ -47,6 +49,17 @@ hungerReduce () {
     petName.hunger -= hungerReduceVariable;
     $('#hungerTracker').text(`Hunger: ${petName.hunger}`)
 },
+
+sleepinessReduce () {
+    petName.sleepiness -= sleepinessReduceVariable;
+    $('#sleepinessTracker').text(`Sleepiness: ${petName.sleepiness}`)
+},
+
+boredomReduce () {
+    petName.boredom -= boredomReduceVariable;
+    $('#boredomTracker').text(`Boredom: ${petName.boredom}`)
+},
+
 }
 
 $('.buttons').on('mousedown', e => {
@@ -62,4 +75,14 @@ $('.buttons').on('mouseup', e => {
 $("#feed").on('click', () => {
     console.log("feed clicked");
     game.hungerReduce();
+})
+
+$("#lights").on('click', () => {
+    console.log("lights clicked");
+    game.sleepinessReduce();
+})
+
+$("#play").on('click', () => {
+    console.log("play clicked");
+    game.boredomReduce();
 })
