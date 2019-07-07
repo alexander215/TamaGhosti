@@ -46,18 +46,24 @@ setTimer () {
     }, 1000)
 },
 hungerReduce () {
-    petName.hunger -= hungerReduceVariable;
+    if (petName.hunger > 0) {
+        petName.hunger -= hungerReduceVariable;
     $('#hungerTracker').text(`Hunger: ${petName.hunger}`)
+    }
 },
 
 sleepinessReduce () {
+    if (petName.sleepiness > 0) {
     petName.sleepiness -= sleepinessReduceVariable;
     $('#sleepinessTracker').text(`Sleepiness: ${petName.sleepiness}`)
+    }
 },
 
 boredomReduce () {
+    if (petName.boredom > 0) {
     petName.boredom -= boredomReduceVariable;
     $('#boredomTracker').text(`Boredom: ${petName.boredom}`)
+    }
 },
 
 }
