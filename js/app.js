@@ -2,7 +2,7 @@ let petName;
 let ageVariable = 5;
 let hungerVariable = 3;
 let sleepinessVariable = 3;
-let boredomVariable = 3;
+let boredomVariable = 1;
 let hungerReduceVariable = 1;
 let sleepinessReduceVariable = 1;
 let boredomReduceVariable = 1;
@@ -23,8 +23,8 @@ startGame () {
 
 },
 setTimer () {
-    setInterval(() => {
-        // console.log(`Game timer: ${petName.time}`);
+    const timer = setInterval(() => {
+        console.log(`Game timer: ${petName.time}`);
         petName.time +=1;
         $('#gameTimer').text(`Time: ${petName.time}`)
         if ((petName.time % ageVariable) === 0){
@@ -43,6 +43,18 @@ setTimer () {
             petName.boredom +=1;
             $('#boredomTracker').text(`Boredom: ${petName.boredom}`)
         }
+        if (petName.hunger >= 10) {
+            clearTimeout(timer);
+            this.gameOver('hungry');
+        }
+        if (petName.sleepiness >= 10) {
+            clearTimeout(timer);
+            this.gameOver('sleepy');
+        }
+        if (petName.boredom >= 10) {
+            clearTimeout(timer);
+            this.gameOver('bored');
+        }
     }, 1000)
 },
 hungerReduce () {
@@ -56,6 +68,8 @@ sleepinessReduce () {
     if (petName.sleepiness > 0) {
     petName.sleepiness -= sleepinessReduceVariable;
     $('#sleepinessTracker').text(`Sleepiness: ${petName.sleepiness}`)
+    $('#pet').css('background-color', 'black');
+    $('#pet').css('color', 'white').delay(600);
     }
 },
 
@@ -65,6 +79,14 @@ boredomReduce () {
     $('#boredomTracker').text(`Boredom: ${petName.boredom}`)
     }
 },
+
+gameOver (reason) {
+    $('#pet').css('color', 'red').append(`<h1>Oh no! <u>${petName.name}</u> became too ${reason} and left for another dimension!</h1>`);
+    $('#ghost').attr('src', 'images/angry-ghost.svg');
+    // clearTimeout(game);
+    // clearInterval(game);
+
+}
 
 }
 
