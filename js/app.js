@@ -3,9 +3,9 @@ let ageVariable = 5;
 let hungerVariable = 4;
 let sleepinessVariable = 5;
 let boredomVariable = 6;
-let hungerReduceVariable = 1;
-let sleepinessReduceVariable = 1;
-let boredomReduceVariable = 1;
+let hungerReduceVariable = 3;
+let sleepinessReduceVariable = 3;
+let boredomReduceVariable = 3;
 
 $('.bars').hide();
 
@@ -60,25 +60,36 @@ setTimer () {
     }, 1000)
 },
 hungerReduce () {
-    if (petName.hunger > 0) {
+    if ((petName.hunger > 0) && ((petName.hunger - hungerReduceVariable) >= 0)) {
         petName.hunger -= hungerReduceVariable;
-    $('#hungerTracker').text(`Hunger: ${petName.hunger}`)
+        $('#hungerTracker').text(`Hunger: ${petName.hunger}`);
+    } else {
+        petName.hunger = 0;
+        $('#hungerTracker').text(`Hunger: ${petName.hunger}`);
     }
+    
 },
 
 sleepinessReduce () {
-    if (petName.sleepiness > 0) {
-    petName.sleepiness -= sleepinessReduceVariable;
-    $('#sleepinessTracker').text(`Sleepiness: ${petName.sleepiness}`)
+    if ((petName.sleepiness > 0) && ((petName.sleepiness - sleepinessReduceVariable) >= 0)){
+        petName.sleepiness -= sleepinessReduceVariable;
+        $('#sleepinessTracker').text(`Sleepiness: ${petName.sleepiness}`)
+    } else {
+        petName.sleepiness = 0;
+        $('#sleepinessTracker').text(`Sleepiness: ${petName.sleepiness}`)
+    }
     $('.pet').css('background-color', 'black');
     $('.pet').css('color', 'white').delay(600);
-    }
+    
 },
 
 boredomReduce () {
-    if (petName.boredom > 0) {
-    petName.boredom -= boredomReduceVariable;
-    $('#boredomTracker').text(`Boredom: ${petName.boredom}`)
+    if ((petName.boredom > 0) && ((petName.boredom - boredomReduceVariable) >= 0)) {
+        petName.boredom -= boredomReduceVariable;
+        $('#boredomTracker').text(`Boredom: ${petName.boredom}`)
+    } else {
+        petName.boredom = 0;
+        $('#boredomTracker').text(`Boredom: ${petName.boredom}`)
     }
 },
 
