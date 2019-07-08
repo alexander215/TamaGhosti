@@ -4,14 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=Chewy|Permanent+Marker|Rock+Salt|Shadows+Into+Light&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Chewy|Happy+Monkey|Permanent+Marker|Rock+Salt|Shadows+Into+Light&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>Tamagochi Game</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
 </head>
 <body>
     <div id="startButton">
-        <p>Ready to play?</p>
+        <p>Click to begin.</p>
+    </div>
+    <div class="instructions">
+        <div class="rules">
+            <h2>Welcome to Tama-Ghost-i</h2>
+            <ul>The rules:</ul>
+            <li>Keep your ghost fed, entertained, and rested</li>
+            <li>If any stats hit 10, your ghost will leave you for another dimension</li>
+        </div>
     </div>
     <div class="title">       
     </div>
@@ -19,7 +27,7 @@
             <img id="ghost" src="images/baby-ghost.png"/>
     </div>
     <div class="interactive">
-        <div id="bars">
+        <div class="bars">
             <!-- <div class="stats">
                 <h2 id="gameTimer">Game Time: 0</h2>
             </div> -->

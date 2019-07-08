@@ -23,6 +23,7 @@ const game = {
 startGame () {
     petName = prompt('What do you want to name your pet?', '');
     $('#startButton').hide();
+    $('.instructions').hide();
     // petName = new Tamagotchi(petName);
     petName = new Tamagotchi(petName);
     petName.initPet();

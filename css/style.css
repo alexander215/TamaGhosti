@@ -8,9 +8,32 @@ body {
 #startButton {
     text-align: center;
     border: white solid 2px;
-    background-color: red;
-    color: black;
+    background-color: black;
+    color: #fff301;
+    margin: 100px auto;
     padding: 25px;
+    max-width: 40%;
+    font-size: 50px;
+    font-family: 'Permanent Marker', cursive;
+    border-radius: 40%;
+}
+
+.instructions {
+    max-width: 40%;
+    margin: 0 auto;
+    font-size: 20px;
+    font-family: 'Happy Monkey', cursive;
+}
+
+h2 {
+    text-align: center;
+}
+
+.bars {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 30%;
+    margin: 0 auto;
 }
 
 #div {
