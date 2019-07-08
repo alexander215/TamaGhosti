@@ -1,5 +1,7 @@
 body {
-    background-image: linear-gradient(90deg, #17BEBB, #00A56E, #0197F6);
+    /* background-image: linear-gradient(90deg, #5381cc, #12147b, #000000); */
+    background-image: linear-gradient(90deg, #004191, #1c4e81, #000000);
+    color: #fff301;
 
 }
 
@@ -23,10 +25,14 @@ body {
     /* float: left; */
     text-align: center;
     margin: 0 auto;
+    font-family: 'Rock Salt', cursive;
+
 }
 
 .title {
     text-align: center;
+    font-family: 'Chewy', cursive;
+    font-size: 20px;
 }
 .pet {
     text-align: center;
@@ -74,6 +80,11 @@ button {
     padding: 25px;
     text-align: center;
     width: 200px;
+    font-size: 20px;
+    font-family: 'Permanent Marker', cursive;
+    border-radius: 10%;
+
+
 
 }
 
