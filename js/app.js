@@ -63,8 +63,16 @@ setTimer () {
             clearTimeout(timer);
             this.gameOver('bored');
         }
+        if(petName.age === 3){
+            $('#ghost').attr('src', 'images/ghost-pet.png');
+        }
+        if(petName.age === 10){
+            $('#ghost').attr('src', 'images/Adult-ghost.png');
+        }
     }, 1000)
 },
+
+
 hungerReduce () {
     if ((petName.hunger > 0) && ((petName.hunger - hungerReduceVariable) >= 0)) {
         petName.hunger -= hungerReduceVariable;
